@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IranSans", Arial;
+}
+@font-face {
+  font-family: "IranSans";
+  src:
+    url("../public/fonts/iran_sans/ttf/IRANSansWeb_Bold.ttf") format("ttf"),
+    url("../public/fonts/iran_sans/woff/IRANSansWeb_Bold.woff") format("woff"),
+    url("../public/fonts/iran_sans/eot//IRANSansWeb_Bold.eot") format("eot"),
+    url("../public/fonts/iran_sans/woff2/IRANSansWeb_Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Container for the custom input */
+.custom-input {
+  position: relative;
+  width: 300px;
+  margin: 20px 0;
+}
+
+/* Style the input field */
+.custom-input input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Change border color on focus */
+.custom-input input:focus {
+  border-color: #007bff;
+}
+
+/* Style the label */
+.custom-input label {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Move the label up when the input is focused or has content */
+.custom-input input:focus + label,
+.custom-input input:not(:placeholder-shown) + label {
+  top: 0;
+  font-size: 12px;
+  color: #007bff;
+  background: white;
+  padding: 0 5px;
+}
+
+
+/* Gradient button */
+.gradient-button {
+  background: linear-gradient(45deg, #007bff, #0052aa); /* Gradient background */
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 25px; /* More rounded corners */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.gradient-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(56, 70, 255, 0.4); /* Add shadow */
+}
+
+/* Icon styling */
+.icon {
+  margin-right: 8px;
+}
